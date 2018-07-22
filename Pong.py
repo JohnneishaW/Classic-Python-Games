@@ -54,7 +54,7 @@ class AIPaddle(object):
          self.centerY = int(screensize[1]*0.5)
          self.height = 100
          self.width = 10
-         self.speed = 4
+         self.speed = 5
 
          self.rect = pg.Rect(0, self.centerY - int(self.height*0.5), self.width, self.height)
          self.color = (100, 255, 100)
@@ -108,6 +108,9 @@ def main():
     screen = pg.display.set_mode(screensize)
     clock = pg.time.Clock()
 
+    pg.mixer.music.load('PongSong.mp3')
+    pg.mixer.music.play()
+
     pong = Pong(screensize)
     aiPaddle = AIPaddle(screensize)
     playerPaddle = PlayerPaddle(screensize)
@@ -115,6 +118,7 @@ def main():
     running = True
     while running:
         clock.tick(64)
+
         #event handling
         for event in pg.event.get():
             if event.type == QUIT:
