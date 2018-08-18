@@ -14,7 +14,7 @@ class Pong(object):
         self.color = (0, 0, 0)
         self.direction = [1, 1]
         self.speedX = 2
-        self.speedY = 5
+        self.speedY = 3
 
         self.hit_edge_left = False
         self.hit_edge_right = False
@@ -54,7 +54,7 @@ class AIPaddle(object):
          self.centerY = int(screensize[1]*0.5)
          self.height = 100
          self.width = 10
-         self.speed = 5
+         self.speed = 3
 
          self.rect = pg.Rect(0, self.centerY - int(self.height*0.5), self.width, self.height)
          self.color = (100, 255, 100)
