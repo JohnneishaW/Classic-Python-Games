@@ -169,6 +169,7 @@ def message_box(subject, content):
     except:
         pass
 
+    
 def main():
     global width, rows, s, snack
     #create window
